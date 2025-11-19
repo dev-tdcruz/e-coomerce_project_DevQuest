@@ -8,27 +8,97 @@
 </head>
 
 <body>
+    <!-- Criando o cabeçalho da página -->
     <header>
+
+        <!-- Logo principal da página com um link para a página inicial-->
         <a href="">
             <img src="./src/images/logo.svg" alt="Logo My E-commerce Dev em Dobro" />
-            <nav>
-                <ul>
-                    <!-- colocar um #[texto] na referência do link serve para que ao clicar no link o usuário não saia da página, muito útil para quando na mesma página temos links para seções diferentes -->
-
-                    <li><a href="#sobre">Home</a></li>
-                    <li><a href="#produtos">Sobre</a></li>
-                    <li><a href="#produtos">Produtos</a></li>
-                    <li><a href="#faq">Perguntas Frequentes</a></li>
-                    <li><a href="#contato">Fale Conosco</a></li>
-                </ul>
-            </nav>
-            <button>
-                <img src="./src/images/icone_carrinho.svg" alt="Carrinho de Compras" />
-            </button>
         </a>
+
+        <!-- Painel de navegação -->
+        <nav>
+            <ul>
+                <!-- colocar um #[texto] na referência do link serve para que ao clicar no link o usuário não saia da página, muito útil para quando na mesma página temos links para seções diferentes -->
+
+                <li><a href="#sobre">Home</a></li>
+                <li><a href="#produtos">Sobre</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#faq">Perguntas Frequentes</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botão de Carrinho -->
+        <button>
+            <img src="./src/images/icone_carrinho.svg" alt="Carrinho de Compras" />
+        </button>
+
     </header>
 
-    <main></main>
+    <!-- Criando a parte principal da página separando por seções-->
+    <main>
+
+        <!-- Seção de produtos -->
+        <section>
+
+            <!-- Título da seção -->
+            <h2>Produtos</h2>
+
+            <!-- Lista de produtos -->
+            <ul>
+
+                <!-- Primeiro produto -->
+                <li>
+                    <!-- Criando o container da imagem com <figure>, que serve também para diagramas e ilustrações e permite a utilização de legendas -->
+                    <figure>
+                        <img src="./src/images/camiseta_roxa.jpg" alt="Camiseta Dev em Dobro - Roxa" />
+                        <figcaption>Camiseta Dev em Dobro - Roxa</figcaption>
+                    </figure>
+
+                    <!-- Gerando o espaço para as informações do produto -->
+                    <div>
+
+                        <!-- Utilizando <span> para dispor as informações em linha  -->
+                        <span>Cor: Roxa</span>
+                        <span>Tamanho: P</span>
+                        <span>R$ 69,90</span>
+
+                        <!-- Botão de Adicionar ao Carrinho -->
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                </li>
+
+                <!-- Segundo produto -->
+                <li>
+                    <figure>
+                        <img src="./src/images/camiseta_roxa.jpg" alt="Camiseta Dev em Dobro - Roxa" />
+                        <figcaption>Camiseta Dev em Dobro - Roxa</figcaption>
+                    </figure>
+                    <div>
+                        <span>Cor: Roxa</span>
+                        <span>Tamanho: M</span>
+                        <span>R$ 79,90</span>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                </li>
+
+                <!-- Terceiro produto -->
+                <li>
+                    <figure>
+                        <img src="./src/images/camiseta_roxa.jpg" alt="Camiseta Dev em Dobro - Roxa" />
+                        <figcaption>Camiseta Dev em Dobro - Roxa</figcaption>
+                    </figure>
+                    <div>
+                        <span>Cor: Roxa</span>
+                        <span>Tamanho: G</span>
+                        <span>R$ 89,90</span>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
 
     <footer></footer>
 
