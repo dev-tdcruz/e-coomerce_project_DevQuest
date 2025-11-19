@@ -1,0 +1,1 @@
+E-commerce criado como projeto do curso Starter Dev com IA - DevQuest
