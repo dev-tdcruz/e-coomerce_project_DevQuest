@@ -1,0 +1,145 @@
+.cabecalho {
+    /* Endereçamos esse elemento à grid-area no css principal */
+    grid-area: header;
+
+    padding: 1rem 0;
+}
+
+.header-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.header-esquerda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.menu-hamburguer {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    /* Naturalmente o span funciona como display: inline, e não permite que o elemento possua largura e altura. Por isso precisa setar o display: block */
+
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.cabecalho .menu-principal {
+    /* Escondendo o menu principal */
+    display: none;
+    background-color: var(--cor-neutra-escura);
+
+    /* Com position: absolute nós desgrudamos o elemento da trava padrão dos elementos block-level e permitimos que ele se mova flutuante sobre os demais elementos */
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+.cabecalho .menu-principal ul li a {
+    display: block;
+    color: var(--cor-neutra-branca);
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    padding: 1rem;
+    width: 50%;
+}
+
+/* Adicionando uma pseudo classe para efeito ao passar o mouse por cima */
+
+.cabecalho .menu-principal ul li a:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+/* Adicionando a configuração de abrir menu para quando o cabecalho possuir as classes setadas abaixo */
+.cabecalho.menu-ativo .menu-principal {
+    display: block;
+}
+
+/* Estilizando o botão do carrinho */
+
+.botao-carrinho {
+    background-color: transparent;
+    border: 0;
+    padding: 10px;
+
+    /* Para fazer o posicionamento correto do numeral indicador do carrinho colocamos esse elemento pai como relativo */
+    position: relative;
+    cursor: pointer;
+}
+
+/* Estilizando o numerador do carrinho */
+.botao-carrinho span {
+    background-color: var(--cor-primaria);
+    color: var(--cor-neutra-branca);
+    font-weight: 600;
+    font-size: 0.7rem;
+
+    /* Para posicioná-lo utilizamos o position:absolut */
+    position: absolute;
+    top: 30px;
+    left: 29px;
+
+    /* Ajustando o posicionamento e alinhamento */
+    display: flex;
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+@media (min-width: 940px) {
+    .cabecalho {
+        padding: 1rem;
+    }
+
+    .cabecalho .menu-principal {
+        display: block;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .cabecalho .menu-principal ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cabecalho .menu-principal ul li a {
+        width: 100%;
+        padding: .8rem;
+    }
+
+    .menu-hamburguer {
+        position: absolute;
+        display: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    .cabecalho {
+        max-width: 1440px;
+        margin: auto;
+    }
+}

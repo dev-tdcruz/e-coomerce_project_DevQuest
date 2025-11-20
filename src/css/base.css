@@ -1,0 +1,28 @@
+/* Um conceito importante no CSS é o de variáveis, onde, dentro de um elemento raiz (:root) é informado as estilizações que são usadas por mais de um elemento, pricipalmente cores, atribuídas à uma variável determinada */
+
+:root {
+    --cor-neutra-escura: #111;
+    --cor-neutra-branca: #fff;
+    --cor-primaria-hover: #834de8;
+    --cor-primaria: #6528d3;
+}
+
+body {
+    background-color: var(--cor-neutra-escura);
+    color: #fff;
+    min-height: 100vh;
+
+    /* O display grid faz com que o layout fique responsivi de um jeito mais fácil, funcionando basicamente como uma grade.
+    
+    Com o "areas" identificamos quais seções endereçadas terão o display. Com o "rows" definimos a altura do conteúdo que está dentro de cada área, sendo a ordem de definição de valor respectiva a ordem de áreas indicadas.
+    
+    Com o "auto" a altura será exatamente igual ao tamanho do conteúdo dentro da seção. Com o "1fr" (unidade única do grid) a altura correspondera a 1 fração do espaço restante da página */
+
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+/* Como a maioria dos acessos hoje são feitos pelo celular é importante utilizar a convenção de "mobile-first" e começar pela estilização para uma tela menor e mais restrita e depois fazer as alterações para telas maiores como a de computadores */
