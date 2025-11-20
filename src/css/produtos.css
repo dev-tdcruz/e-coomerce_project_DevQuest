@@ -90,7 +90,7 @@ main .informacoes .adicionar-ao-carrinho:hover {
 }
 
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 
     main .produtos .produto {
         min-width: 368px;
@@ -110,8 +110,6 @@ main .informacoes .adicionar-ao-carrinho:hover {
     }
 
     main section h2 {
-    text-align: left;
-}
-
-    
+        text-align: left;
+    }
 }
