@@ -25,6 +25,10 @@ main .produtos ul {
 main .produtos .produto {
     max-width: 368px;
     border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--cor-cinza-escuro);
 }
 
 main .produto img {
@@ -53,6 +57,7 @@ main .informacoes {
     flex-direction: column;
     gap: 0.5rem;
     padding: 0 1.5rem 1.5rem;
+    border-radius: 0 0 14px 14px;
 }
 
 main .informacoes span {
@@ -83,6 +88,9 @@ main .informacoes .adicionar-ao-carrinho {
 
     /* Aplicando uma animação de transição no botão */
     transition: background-color 0.3s ease-in-out;
+
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
 }
 
 main .informacoes .adicionar-ao-carrinho:hover {
@@ -103,7 +111,7 @@ main .informacoes .adicionar-ao-carrinho:hover {
     }
 }
 
-@media (min-width: 1170px) {
+@media (min-width: 1200px) {
     main section {
         max-width: 1170px;
         margin: 0 auto;

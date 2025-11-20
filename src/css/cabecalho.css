@@ -129,7 +129,7 @@
 
     .cabecalho .menu-principal ul {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
     }
 
     .cabecalho .menu-principal ul li a {
