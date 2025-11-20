@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/base.css">
     <link rel="stylesheet" href="src/css/cabecalho.css">
-
+    <link rel="stylesheet" href="src/css/produtos.css">
+    
 </head>
 
 <body>
@@ -64,7 +65,7 @@
     <main>
 
         <!-- Seção de produtos -->
-        <section>
+        <section class="produtos">
 
             <!-- Título da seção -->
             <h2>Produtos</h2>
@@ -73,7 +74,7 @@
             <ul>
 
                 <!-- Primeiro produto -->
-                <li>
+                <li class="produto">
                     <!-- Criando o container da imagem com <figure>, que serve também para diagramas e ilustrações e permite a utilização de legendas -->
                     <figure>
                         <img src="./src/images/camiseta_roxa.jpg" alt="Camiseta Dev em Dobro - Roxa" />
@@ -81,43 +82,85 @@
                     </figure>
 
                     <!-- Gerando o espaço para as informações do produto -->
-                    <div>
+                    <div class="informacoes">
 
                         <!-- Utilizando <span> para dispor as informações em linha  -->
-                        <span>Cor: Roxa</span>
-                        <span>Tamanho: P</span>
-                        <span>R$ 69,90</span>
+                        <span><strong>Cor:</strong> Roxa</span>
+                        <span><strong>Tamanho:</strong> P</span>
+                        <span class="preco">R$ 69,90</span>
 
                         <!-- Botão de Adicionar ao Carrinho -->
-                        <button>Adicionar ao Carrinho</button>
+                        <button class="adicionar-ao-carrinho">Adicionar ao Carrinho</button>
                     </div>
                 </li>
 
                 <!-- Segundo produto -->
-                <li>
+                <li class="produto">
                     <figure>
                         <img src="./src/images/camiseta_roxa.jpg" alt="Camiseta Dev em Dobro - Roxa" />
                         <figcaption>Camiseta Dev em Dobro - Roxa</figcaption>
                     </figure>
-                    <div>
-                        <span>Cor: Roxa</span>
-                        <span>Tamanho: M</span>
-                        <span>R$ 79,90</span>
-                        <button>Adicionar ao Carrinho</button>
+                    <div class="informacoes">
+                        <span><strong>Cor:</strong> Roxa</span>
+                        <span><strong>Tamanho:</strong> M</span>
+                        <span class="preco">R$ 79,90</span>
+                        <button class="adicionar-ao-carrinho">Adicionar ao Carrinho</button>
                     </div>
                 </li>
 
                 <!-- Terceiro produto -->
-                <li>
+                <li class="produto">
                     <figure>
                         <img src="./src/images/camiseta_roxa.jpg" alt="Camiseta Dev em Dobro - Roxa" />
                         <figcaption>Camiseta Dev em Dobro - Roxa</figcaption>
                     </figure>
-                    <div>
-                        <span>Cor: Roxa</span>
-                        <span>Tamanho: G</span>
-                        <span>R$ 89,90</span>
-                        <button>Adicionar ao Carrinho</button>
+                    <div class="informacoes">
+                        <span><strong>Cor:</strong> Roxa</span>
+                        <span><strong>Tamanho:</strong> G</span>
+                        <span class="preco">R$ 89,90</span>
+                        <button class="adicionar-ao-carrinho">Adicionar ao Carrinho</button>
+                    </div>
+                </li>
+
+                <!-- Quarto produto -->
+                <li class="produto">
+                    <figure>
+                        <img src="./src/images/caneca_devemdobro.jpg" alt="Caneca Dev em Dobro" />
+                        <figcaption>Caneca Dev em Dobro</figcaption>
+                    </figure>
+                    <div class="informacoes">
+                        <span><strong>Cor:</strong> Branca</span>
+                        <span><strong>Tamanho:</strong> 350mL</span>
+                        <span class="preco">R$ 59,90</span>
+                        <button class="adicionar-ao-carrinho">Adicionar ao Carrinho</button>
+                    </div>
+                </li>
+
+                <!-- Quinto produto -->
+                <li class="produto">
+                    <figure>
+                        <img src="./src/images/caneca_devemdobro.jpg" alt="Caneca Dev em Dobro" />
+                        <figcaption>Caneca Dev em Dobro</figcaption>
+                    </figure>
+                    <div class="informacoes">
+                        <span><strong>Cor:</strong> Branca</span>
+                        <span><strong>Tamanho:</strong> 550mL</span>
+                        <span class="preco">R$ 69,90</span>
+                        <button class="adicionar-ao-carrinho">Adicionar ao Carrinho</button>
+                    </div>
+                </li>
+
+                <!-- Sexto produto -->
+                <li class="produto">
+                    <figure>
+                        <img src="./src/images/caneca_devemdobro.jpg" alt="Caneca Dev em Dobro" />
+                        <figcaption>Caneca Dev em Dobro</figcaption>
+                    </figure>
+                    <div class="informacoes">
+                        <span><strong>Cor:</strong> Branca</span>
+                        <span><strong>Tamanho:</strong> 750mL</span>
+                        <span class="preco">R$ 79,90</span>
+                        <button class="adicionar-ao-carrinho">Adicionar ao Carrinho</button>
                     </div>
                 </li>
             </ul>
@@ -162,110 +205,7 @@
         </nav>
     </footer>
 
-    <!-- Adicionando um modal para carrinho de compras utilizando a biblioteca MicroModal -->
-
-    <!-- [1] -->
-    <div id="modal-1" class="modal" aria-hidden="true">
-
-        <!-- [2] -->
-        <div tabindex="-1" data-micromodal-close>
-
-            <!-- [3] -->
-            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-
-                <!-- Criando o cabeçalho do modal -->
-                <header>
-                    <h2 id="modal-1-title">
-                        Carrinho de Compras
-                    </h2>
-
-                    <!-- [4] -->
-                    <button aria-label="Close modal" data-micromodal-close></button>
-                </header>
-
-                <!-- Criando o conteúdo do modal -->
-                <div id="modal-1-content">
-
-                    <!-- Utilizando tabela para disposição dos produtos no carrinho de compras -->
-                    <table>
-
-                        <!-- Cabeçalho da tabela -->
-                        <thead>
-                            <!-- Criando a linha do cabeçalho da tabela com <tr> -->
-                            <tr>
-                                <!-- Criando os cabeçalhos da coluna com <th> que define uma célula principal -->
-                                <th>Produto</th>
-                                <th>Descrição</th>
-                                <th>Preço</th>
-                                <th>Quantidade</th>
-                                <th>Total</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-
-                        <!-- Corpo da tabela -->
-                        <tbody>
-                            <!-- Criando as linhas do corpo da tabela com <tr> -->
-                            <tr>
-                                <!-- Criando as células da linha com <td> que define uma célula padrão -->
-                                <td>
-                                    <img src="./src/images/camiseta_roxa.jpg" alt="Camiseta Dev em Dobro - Roxa" />
-                                </td>
-                                <td>Camiseta Dev em Dobro - Roxa (Tam: P)</td>
-                                <td>R$ 69,90</td>
-                                <td><input type="number" name="quantidade-do-produto" id="quantidade-do-produto" min="1"
-                                        value="1" /></td>
-                                <td>R$ 69,90</td>
-                                <td><button id="deletar"></button></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="./src/images/camiseta_roxa.jpg" alt="Camiseta Dev em Dobro - Roxa" />
-                                </td>
-                                <td>Camiseta Dev em Dobro - Roxa (Tam: M)</td>
-                                <td>R$ 79,90</td>
-                                <td><input type="number" name="quantidade-do-produto" id="quantidade-do-produto" min="1"
-                                        value="1" /></td>
-                                <td>R$ 79,90</td>
-                                <td><button id="deletar"></button></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="./src/images/camiseta_roxa.jpg" alt="Camiseta Dev em Dobro - Roxa" />
-                                </td>
-                                <td>Camiseta Dev em Dobro - Roxa (Tam: G)</td>
-                                <td>R$ 89,90</td>
-                                <td><input type="number" name="quantidade-do-produto" id="quantidade-do-produto" min="1"
-                                        value="1" /></td>
-                                <td>R$ 89,90</td>
-                                <td><button id="deletar"></button></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="./src/images/caneca_devemdobro.jpg" alt="Caneca Dev em Dobro" />
-                                </td>
-                                <td>Caneca Dev em Dobro(Tam: G)</td>
-                                <td>R$ 59,90</td>
-                                <td><input type="number" name="quantidade-do-produto" id="quantidade-do-produto" min="1"
-                                        value="1" /></td>
-                                <td>R$ 59,90</td>
-                                <td><button id="deletar"></button></td>
-                            </tr>
-                        </tbody>
-                        <!-- Rodapé da tabela -->
-                        <tfoot>
-                            <!-- Essa tabela não tem rodapé, mas deixo a tag no código para referência -->
-                        </tfoot>
-                    </table>
-                    <div>
-                        <span id="total-carrinho">Total: R$ 0,00</span>
-                        <button>Finalizar Compra</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+ 
 
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 

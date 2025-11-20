@@ -17,13 +17,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
     margin-right: 1rem;
 }
 
 .menu-hamburguer {
     width: 1.5rem;
     height: 1.5rem;
+    margin-right: 10px;
     background: none;
     border: none;
     display: flex;
@@ -39,9 +40,11 @@
     display: block;
     height: 3px;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--cor-neutra-branca);
     border-radius: 2px;
 }
+
+
 
 .cabecalho .menu-principal {
     /* Escondendo o menu principal */
@@ -82,6 +85,7 @@
     background-color: transparent;
     border: 0;
     padding: 10px;
+    margin-left: 1rem;
 
     /* Para fazer o posicionamento correto do numeral indicador do carrinho colocamos esse elemento pai como relativo */
     position: relative;
@@ -108,6 +112,8 @@
     align-items: center;
     border-radius: 50%;
 }
+
+/* Adicionando responsividade para telas maiores */
 
 @media (min-width: 940px) {
     .cabecalho {
@@ -137,9 +143,9 @@
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1170px) {
     .cabecalho {
-        max-width: 1440px;
+        max-width: 1170px;
         margin: auto;
     }
 }
